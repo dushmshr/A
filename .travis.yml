@@ -1,0 +1,12 @@
+language: python
+python:
+  - "3.6.3"
+  - "3.5.4"
+
+before_install:
+  - export PIP_USE_MIRRORS=true
+
+install:
+  pip install django
+
+script: python manage.py test
