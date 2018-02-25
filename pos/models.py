@@ -55,3 +55,6 @@ class Order_Item(models.Model):
     price = models.DecimalField(max_digits=7, decimal_places=2)
     name = models.CharField(max_length=100)
     timestamp = models.DateTimeField(auto_now=True)
+
+class ProductAdmin(admin.ModelAdmin):
+    list_display = ('name','price','stock')
