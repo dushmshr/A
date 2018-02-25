@@ -52,7 +52,7 @@ class Cash(models.Model):
                                  decimal_places=2,
                                  default=0)
     def __str__(self):
-        return self.name
+        return self.amount
 
 
 class Order_Item(models.Model):
