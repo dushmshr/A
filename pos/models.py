@@ -43,11 +43,16 @@ class Order(models.Model):
     done = models.BooleanField(default=False)
     last_change = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.name
+
 
 class Cash(models.Model):
     amount = models.DecimalField(max_digits=7,
                                  decimal_places=2,
                                  default=0)
+    def __str__(self):
+        return self.name
 
 
 class Order_Item(models.Model):
@@ -57,5 +62,14 @@ class Order_Item(models.Model):
     name = models.CharField(max_length=100)
     timestamp = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.name
+
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('name','price','stock')
+
+class CashAdmin(models.ModelAdmin):
+    list_display = ('amount')
+
+class Order_ItemAdmin(models.ModelAdmin):
+    list_display = ('product','price','timestamp')
