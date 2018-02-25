@@ -44,7 +44,7 @@ class Order(models.Model):
     last_change = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.name
+        return self.total_price
 
 
 class Cash(models.Model):
