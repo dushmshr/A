@@ -3,6 +3,7 @@ from django.core.exceptions import ValidationError
 from django.conf import settings
 import re
 from django.contrib.auth.models import User
+from django.contrib import admin
 
 
 def validate_product_name(prodname):
