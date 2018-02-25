@@ -68,8 +68,6 @@ class Order_Item(models.Model):
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('name','price','stock')
 
-class CashAdmin(admin.ModelAdmin):
-    list_display = ('amount')
 
 class Order_ItemAdmin(admin.ModelAdmin):
     list_display = ('product','price','timestamp')
