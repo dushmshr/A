@@ -6,7 +6,7 @@ click==6.7
 colorama==0.3.9
 cycler==0.10.0
 decorator==4.2.1
-Django==2.0
+Django==2.2.24
 entrypoints==0.2.3
 ez-setup==0.9
 future==0.16.0
